@@ -7,7 +7,7 @@ from statsbombpy import sb
 warnings.filterwarnings("ignore")
 
 COMPETICION_ID = 11      # La Liga
-TEMPORADAS = [27]        # 27 = 2015/2016 (luego agregaremos más)
+TEMPORADAS = [4]        # 27 = 2018/2019
 
 COLUMNAS = [
     "minute", "team", "player", "location", "shot_outcome",

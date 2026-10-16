@@ -10,7 +10,7 @@ EQUIPO = "Barcelona"
 
 # 1. Datos: xG de tu modelo, sumado por partido
 tiros = pd.read_csv("data/tiros_con_xg.csv")
-partidos = sb.matches(competition_id=11, season_id=27)[["match_id", "match_date"]]
+partidos = sb.matches(competition_id=11, season_id=4)[["match_id", "match_date"]]
 partidos["match_date"] = pd.to_datetime(partidos["match_date"])
 
 por_partido = (
@@ -54,8 +54,8 @@ ax.axhline(media, color="green", label=f"Media ({media:.2f})")
 ax.axhline(LCS, color="red", linestyle="--", label=f"LCS ({LCS:.2f})")
 ax.axhline(LCI, color="red", linestyle="--", label=f"LCI ({LCI:.2f})")
 ax.scatter(fuera["match_date"], fuera["xg_propio"], color="red", s=120, zorder=5)
-ax.set_title(f"Gráfico de control: xG por partido - {EQUIPO} 2015/16")
+ax.set_title(f"Gráfico de control: xG por partido - {EQUIPO} 2018/2019")
 ax.set_ylabel("xG (jugadas abiertas)")
 ax.legend()
-plt.savefig("grafico_control_barcelona.png", dpi=300, bbox_inches="tight")
+plt.savefig("grafico_control_barcelona_2018_19.png", dpi=300, bbox_inches="tight")
 plt.show()
